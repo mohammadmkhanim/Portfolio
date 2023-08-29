@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/images/logo.jpg">
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/customStyles.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+@* fa-solid fa-bars *@
+<body class="px-3 sm:px-5 2xl:px-20 bg-[rgb(23,23,23)]">
+    <noscript data-n-css=""></noscript>
+    <header id="header-id" class="w-full sticky top-0 z-10 backdrop-blur-sm bg-inherit opacity-95">
+        <nav class="relative flex items-center py-8 px-2 md:px-8 mx-auto xl:px-0">
+            <div class="flex flex-wrap items-center justify-between w-full lg:w-auto">
+                <a asp-controller="Home" asp-action="DownloadCV"
+                        class="px-4 py-3 text-md font-medium text-center text-white bg-indigo-600 rounded-md">
+                        Download CV
+                </a>
+
+                @* <partial name="_SiteLogoPartial" /> *@
+            </div>
+            <div id="navbar" class="lg:ml-10 hidden fixed lg:flex lg:items-center lg:static top-0 left-0 right-0 bg-[rgb(23,23,23)] text-center">
+                <span class="lg:hidden text-white text-xl absolute right-0 py-10 px-2 md:px-8">
+                    <i onclick="addClassToElement([['navbar','hidden']])" class="cursor-pointer fa-regular fa-circle-xmark"></i>
+                </span>
+                <ul class="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex text-white">
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'about')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            About
+                        </button>
+                    </li>
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'objective')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            Objective
+                        </button>
+                    </li>
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'services')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            Services
+                        </button>
+                    </li>
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'technical-skills')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            Technical skills
+                        </button>
+                    </li>
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'professional-projects')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            Professional Projects
+                        </button>
+                    </li>
+                    <li class="mr-3">
+                        <button
+                            onclick="scrollToElement(event,'languages')"
+                            class="inline-block px-4 py-2 text-lg font-normal no-underline rounded-md hover:text-gray-400">
+                            Languages
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <span onclick="removeClassFromElement([['navbar','hidden']])" class="lg:hidden cursor-pointer">
+                <i class="text-white text-xl fa-solid fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+  
+  
+    <footer class="relative mb-16">
+            <div class="flex flex-col items-center mx-auto">
+                @* <div class="flex mb-3">
+                    <partial name="_SiteLogoPartial" />
+                </div> *@
+                <div class="flex items-center my-1">
+                    <div class="flex space-x-5 text-gray-400 text-3xl">
+                        <a href="https://www.linkedin.com/in/mohammad-mohammad-khani-370073236" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/mohammadmkhanim" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://t.me/mohammadmkhani" target="_blank">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                        <a href="https://instagram.com/mhmmd_mkh_?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                @* <div class="ml-2 my-1 flex items-center text-gray-600">Copyright</div> *@
+            </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+      function scrollToElement(e, elementId) {
+        var element = document.getElementById(elementId)
+        titlesContainer = document.getElementById('header-id');
+        const computedStyles = window.getComputedStyle(titlesContainer);
+        var topValue = computedStyles.getPropertyValue('top');
+        topValue = parseInt(topValue);
+        scrollTo(0, element.offsetTop - titlesContainer.clientHeight - topValue - 20)
+      }
+    </script>
+
+</body>
+</html>

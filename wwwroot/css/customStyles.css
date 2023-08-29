@@ -1,0 +1,147 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.c-ellipsis-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.c-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.c-scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.c-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.c-max-width-3rem {
+  max-width: 3rem;
+}
+.c-background-drop-down-remover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 100;
+}
+.c-loader-dots div {
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.c-loader-dots div:nth-child(1) {
+  left: 8px;
+  animation: c-loader-dots1 0.6s infinite;
+}
+.c-loader-dots div:nth-child(2) {
+  left: 8px;
+  animation: c-loader-dots2 0.6s infinite;
+}
+.c-loader-dots div:nth-child(3) {
+  left: 32px;
+  animation: c-loader-dots2 0.6s infinite;
+}
+.c-loader-dots div:nth-child(4) {
+  left: 56px;
+  animation: c-loader-dots3 0.6s infinite;
+}
+@keyframes c-loader-dots1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes c-loader-dots3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes c-loader-dots2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.c-toast {
+  pointer-events: none;
+  min-width: 200px;
+  height: auto;
+  background-color: #fff;
+  font-weight: 500;
+  margin: 10px 0;
+  padding: 12px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+  animation: toast-animation 3s linear forwards;
+}
+.c-toast-message {
+  margin-left: 10px;
+}
+@keyframes c-toast-animation {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
+  }
+}
+.c-toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: green;
+  animation: c-toast-progress-bar 3s linear forwards;
+}
+.success.c-toast::after {
+  background-color: green;
+}
+.error.c-toast::after {
+  background-color: red;
+}
+.warning.c-toast::after {
+  background-color: orange;
+}
+@keyframes c-toast-progress-bar {
+  100% {
+    width: 0;
+  }
+}
+.c-toast i {
+  margin-left: 10px;
+  font-size: 35px;
+}
+.c-toast.success i {
+  color: green;
+}
+.c-toast.error i {
+  color: red;
+}
+.c-toast.warning i {
+  color: orange;
+}

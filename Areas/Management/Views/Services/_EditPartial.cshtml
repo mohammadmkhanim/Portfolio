@@ -1,0 +1,81 @@
+@model Portfolio.Areas.Management.Models.EditServiceViewModel
+
+<button onclick="openModal('edit-service-modal-@Model.Id')"
+  class="mx-2 modal-open text-lg text-gray-800 hover:text-indigo-500 border rounded-md bg-neutral-300 px-3 py-1.5 ">
+  <i class="fas fa-edit"></i>
+</button>
+
+<div style="z-index: 50;"
+  class="modal pointer-events-none hidden fixed w-full h-full top-0 left-0 flex items-center justify-center"
+  id="edit-service-modal-@Model.Id">
+  <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+    onclick="closeModal('edit-service-modal-@Model.Id')">
+  </div>
+  <div style="z-index: 51;"
+    class="bg-white modal-container w-11/12 md:max-w-2xl mx-auto rounded shadow-lg overflow-y-auto">
+    <div class="modal-content py-4 px-6">
+      <!--Title-->
+      <div class="flex justify-between items-center pb-3">
+        <p class="text-2xl">Edit service</p>
+        <div class="modal-close cursor-pointer z-50" onclick="closeModal('edit-service-modal-@Model.Id')">
+          <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 18 18">
+            <path
+              d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <form id="edit-service-form" enctype="multipart/form-data" method="post" asp-action="Edit">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <input asp-for="Id" hidden />
+        <input asp-for="ImageId" hidden />
+        <div class="flex flex-wrap mx-3 text-lg font-normal text-left">
+          <div class="w-full px-3 mb-4 ">
+            <label asp-for="Title" class="tracking-wide text-gray-700 text-xl mb-2"></label>
+            <input asp-for="Title"
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-2 px-4  leading-tight focus:outline-none focus:bg-white"
+              type="text">
+            <span asp-validation-for="Title" class="text-red-500 text-sm"></span>
+          </div>
+
+          <div class="w-full px-3 mb-4 ">
+            <label asp-for="Description" class="tracking-wide text-gray-700 text-xl mb-2"></label>
+            <textarea asp-for="Description"
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-2 px-4  leading-tight focus:outline-none focus:bg-white">
+            </textarea>
+            <span asp-validation-for="Description" class="text-red-500 text-sm"></span>
+          </div>
+
+          <div class="w-full px-3 mb-4 ">
+            <div class="flex justify-start ">
+              <div class=" cursor-pointer relative flex justify-center items-center border-2 rounded-md bg-gray-200">
+                <input asp-for="ImageFile" id="edit-service-icon-input-@Model.Id" accept="image/*"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-2 px-4  leading-tight focus:outline-none focus:bg-white"
+                  >
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full px-3 mb-4">
+            <button type="submit" class="flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-white">
+              <span id="edit-service-button-text-@Model.Id">Edit</span>
+              <svg id="edit-service-button-loading-@Model.Id" class="h-5 hidden w-5 animate-spin text-white" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                </circle>
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,292 @@
+﻿    @using AutoMapper
+    @inject IConfiguration _configuration
+    
+    @{
+        ViewData["Title"] = _configuration["FirstName"] + " " + _configuration["LastName"];
+    }
+    <div class="py-8 my-8 mx-auto xl:px-0 grid lg:grid-cols-2">
+        <div class="flex items-center justify-center w-full lg:order-2">
+            <div class="">
+                @{
+                    var userImage = new ImageViewModel()
+                    {
+                        Name = @_configuration["UserImage"],
+                        HtmlClass = "rounded-lg"
+                    };
+                }
+                <partial name="_ImagePartial" model="userImage" />
+            </div>
+        </div>
+
+        <div class="flex items-center w-full mt-4 lg:mt-0 lg:order-1">
+            <div class="max-w-2xl">
+                <h1
+                    class="text-4xl font-bold leading-snug tracking-tight text-white lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight">
+                    @_configuration["Title"]
+                </h1>
+                <p class="py-5 text-xl leading-normal text-gray-200 lg:text-xl xl:text-2xl">
+                    @_configuration["Description"]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">about</div>
+        <div class="p-5 mb-16 w-full text-lg bg-blue-600 text-white rounded-2xl leading-7">
+            <div class="mb-3">
+                <p class="inline">
+                    First Name:
+                </p>
+                <p class="inline">
+                    @_configuration["FirstName"]
+                </p>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Last Name:
+                </p>
+                <p class="inline">
+                    @_configuration["LastName"]
+                </p>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Birth Date:
+                </p>
+                <p class="inline">
+                    @_configuration["BirthDate"]
+                </p>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Address:
+                </p>
+                <p class="inline">
+                    @_configuration["Address"]
+                </p>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Email:
+                </p>
+                <a href="mailto:@_configuration["Email"]" class="inline">
+                    @_configuration["Email"]
+                </a>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Phone Number:
+                </p>
+                <p class="inline">
+                    @_configuration["PhoneNumber"]
+                </p>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    LinkedIn:
+                </p>
+                <a target="_blank" href="@_configuration["LinkedIn"]" class="inline">
+                    @_configuration["LinkedIn"]
+                </a>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    GitHub:
+                </p>
+                <a target="_blank" href="@_configuration["GitHub"]" class="inline">
+                    @_configuration["GitHub"]
+                </a>
+            </div>
+            <div class="mb-3">
+                <p class="inline">
+                    Education:
+                </p>
+                <p class="inline">
+                    @_configuration["Education"]
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+
+    <section id="objective">
+        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">objective</div>
+        <div class="p-5 mb-16 w-full bg-blue-600 text-white rounded-2xl">
+            @* <h2 class=" mt-3 text-3xl font-bold lg:text-4xl">
+                objective
+            </h2> *@
+            <p class="py-4 text-lg lg:text-xl xl:text-xl">
+                @_configuration["Objective"]
+            </p>
+        </div>
+    </section>
+
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+
+    <section id="services" class="my-10">
+        <div class="w-full mx-auto">
+                <div class="flex flex-wrap ">
+                    <div class="w-full px-4">
+                        <div class="mx-auto text-center mb-5">
+                            <div class="text-sm font-bold tracking-wider text-white uppercase text-center">my services</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+
+                    @foreach(var service in ViewBag.Services)
+                    {
+                        <div class="inline-block w-full sm:w-[49%] lg:w-[33%] xl:w-[24%] px-4">
+                            <div
+                                class="bg-blue-600 text-white shadow-2xl py-8 rounded-lg relative overflow-hidden text-center duration-200 mb-8">
+                                <div
+                                    class="mx-auto w-36 h-36 mb-6 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                                    
+                                    <partial name="_ImagePartial" model="service.Image" />
+
+                                </div>
+                                <h3 class="font-bold text-xl mb-3">@service.Title</h3>
+                                <p class="font-medium text-gray-100">
+                                    @service.Description
+                                </p>
+                                <div>
+                                    <span class="absolute top-0 right-0">
+                                        <svg width="218" height="109" viewBox="0 0 218 109" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle opacity="0.05" cx="156.5" cy="-47.5" r="156.5" fill="white">
+                                            </circle>
+                                            <circle opacity="0.08" cx="210" cy="6" r="62" fill="white"></circle>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+        </div>
+    </section>
+
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+
+    <section id="technical-skills">
+        <div class="flex flex-col">
+            <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">Technical Skills</div>
+
+            <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50 mb-12">
+                
+                @for (int i = 0; i < ViewBag.TechnicalSkills.Count; i++)
+                {
+                    var technicalSkill = ViewBag.TechnicalSkills[i];
+                    if(i % 2 == 0)
+                    {
+                        <!-- left -->
+                        <div class="flex flex-row-reverse md:contents">
+                            <div class="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 mr-auto md:mr-0 md:ml-auto shadow-md ">
+                                <h3 class="font-semibold text-lg mb-1">@technicalSkill.Title</h3>
+                                <p class="text-gray-100">
+                                    @technicalSkill.Description
+                                </p>
+                            </div>
+                            <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                                <div class="h-full w-6 flex items-center justify-center">
+                                    <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                                </div>
+                                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-white border-4 border-blue-500 shadow">
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <!-- right -->
+                        <div class="flex md:contents">
+                            <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                                <div class="h-full w-6 flex items-center justify-center">
+                                    <div class="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                                </div>
+                                <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-white border-4 border-blue-500 shadow">
+                                </div>
+                            </div>
+                            <div class="bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+                                <h3 class="font-semibold text-lg mb-1">@technicalSkill.Title</h3>
+                                <p class="text-gray-100">
+                                    @technicalSkill.Description
+                                </p>
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+
+    </section>
+
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+
+    <section id="professional-projects">
+        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">professional projects</div>
+        <div class="text-md font-bold tracking-wider text-white text-center mb-5">See my all projects on 
+            <a href="@_configuration["GitHub"]" target="_blank" class="text-blue-500">GitHub</a>
+        </div>
+        @foreach (var recentWork in ViewBag.RecentWorks)
+        {
+            <div class="mx-auto xl:px-0 flex flex-wrap mb-16 lg:gap-10 lg:flex-nowrap ">
+                <div class="flex items-center justify-center w-full lg:w-1/2">
+                    <div>
+                        <partial name="_ImagePartial" model="recentWork.Image" />
+                        @* <img class="object-cover" style="color: transparent;" src="./IMG_20220128_013000_029.png"> *@
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center w-full lg:w-1/2">
+                    <div>
+                        <div class="flex flex-col w-full">
+                            <h3
+                                class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl">
+                                @recentWork.Title
+                            </h3>
+                            <span class="mt-3 text-gray-200 text-lg">visit project: <a target="_blank" href="@recentWork.Link" class="px-1 rounded text-blue-400">@recentWork.Link</a></span>
+                            <p class="max-w-2xl text-gray-200 py-3 leading-normal">
+                                @Html.Raw(recentWork.Description.Replace("\n", "<br>"))
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+
+    <section id="languages">
+        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">Languages</div>
+        <div class="mx-auto mb-12 xl:px-0 w-full text-center">
+
+            @foreach(var language in ViewBag.Languages)
+            {
+                <div class="text-left inline-flex justify-center items-start w-[100%] sm:w-[49%] md:w-[32%] lg:w-[24%] my-4">
+                    <div class="flex">
+                        <div class="flex items-center justify-center mt-1 bg-blue-600 rounded-md w-11 h-11 p-1 mr-2">
+                            <partial name="_ImagePartial" model="language.Image" />
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-medium text-white">
+                                @language.Title
+                            </h4>
+                            <p class="mt-1 text-gray-200">
+                                @language.Level
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </section>
+    
+    <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
+

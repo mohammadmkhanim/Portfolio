@@ -1,0 +1,5 @@
+@model Portfolio.Areas.Management.Models.ImageViewModel
+@{
+    ViewBag.ImagesFolderAddress = "/images/";
+}
+<img id="@Model.HtmlId" class="@Model.HtmlClass" width="@Model.Width" height="@Model.Height" src="@ViewBag.ImagesFolderAddress@Model.Name" alt="@Model.Alt" title="@Model.Title">

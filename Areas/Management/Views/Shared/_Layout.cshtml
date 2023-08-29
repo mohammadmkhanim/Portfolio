@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="@ViewBag.ImagesFolderAddress/sitelogo.svg">
+  <link rel="icon" href="~/images/logo.jpg">
+  <title>@ViewData["Title"]</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/customStyles.css" asp-append-version="true" />
+  @RenderSection("Style", required: false)
+  <style>
+    a[active-navbar-item] {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body class="text-blueGray-700 antialiased">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+
+    <nav class=" md:rigth-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap
+      md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 p-2">
+      <div
+        class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+        <button
+          class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+          type="button" onclick="removeClassFromElement([['navbar','hidden']])">
+          <i class="fas fa-bars"></i>
+        </button>
+        <partial name="_SiteLogoPartial" />
+
+        <div id="navbar" class="w-full bg-white py-1  md:flex md:flex-col md:items-stretch md:opacity-100 
+          md:relative md:shadow-none shadow absolute top-0 left-0 right-0 z-40 
+          overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden">
+          <div class="md:block md:flex-row md:flex-nowrap md:overflow-hidden bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-1 px-2">
+            <div class="flex justify-start flex-wrap">
+              <div class="w-6/12 flex">
+                <button type="button"
+                  class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+                  onclick="addClassToElement([['navbar','hidden']])">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Divider -->
+          <hr class="my-2 md:min-w-full" />
+
+          <ul class="px-2 md:px-0 md:flex-col text-base md:min-w-full flex flex-col list-none">
+            <li class="items-center">
+              <a asp-area="Management" asp-controller="Services" asp-action="Index"
+                class="hover:text-blue-500 py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                Services
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a asp-area="Management" asp-controller="RecentWorks" asp-action="Index"
+                class="hover:text-blue-500 py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                Recent works
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a asp-area="Management" asp-controller="Languages" asp-action="Index"
+                class="hover:text-blue-500 py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                Languages
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a asp-area="Management" asp-controller="TechnicalSkills" asp-action="Index"
+                class="hover:text-blue-500 py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                Technical Skills
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a asp-area="Management" asp-controller="Auth" asp-action="Logout"
+                class="hover:text-blue-500 py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
+                Logout
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="relative md:ml-64 ">
+      <nav
+        class="hidden w-full md:flex z-10 bg-transparent flex-row flex-nowrap justify-start flex items-center p-4">
+        <div class="w-full justify-between mx-autp items-center flex flex-nowrap flex-wrap px-4">
+          <span class="text-xl font-semibold">
+            @ViewData["Title"]
+          </span>
+        </div>
+      </nav>
+
+      <div class="relative">
+        @RenderBody()
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"></script>
+
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  <script src="~/js/scripts.js" asp-append-version="true"></script>
+
+</body>
+
+</html>

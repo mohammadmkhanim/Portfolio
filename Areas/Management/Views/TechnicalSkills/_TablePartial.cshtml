@@ -1,0 +1,42 @@
+@model IEnumerable<Portfolio.Areas.Management.Models.TechnicalSkillViewModel>;
+@using AutoMapper
+@inject IMapper _mapper
+
+    <div id="modal-container"></div>
+    <table class="items-center w-full bg-transparent border-collapse">
+        <thead>
+            <tr>
+                <th
+                    class="text-center align-middle px-6 border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold bg-blueGray-50 text-blueGray-500 border-blueGray-100">
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+
+                <th
+                    class="text-center align-middle px-6 border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold bg-blueGray-50 text-blueGray-500 border-blueGray-100">
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+
+                <th
+                    class="text-center align-middle px-6 border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold bg-blueGray-50 text-blueGray-500 border-blueGray-100">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+            foreach (var technicalSkill in Model)
+            {
+            <tr>
+                <td class="align-middle text-center text-xs p-4">
+                    @technicalSkill.Title
+                </td>
+                <td class="align-middle text-center text-xs p-4">
+                    @technicalSkill.Description
+                </td>
+                <td class="align-middle text-center text-xs p-4 ">
+                    <partial name="_DeletePartial" model=@technicalSkill />
+                    <partial name="_EditPartial" model=@technicalSkill />
+                </td>
+            </tr> }
+            }
+        </tbody>
+    </table>

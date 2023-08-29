@@ -1,0 +1,15 @@
+<a asp-area="" asp-controller="" asp-action=""
+  class="cursor-pointer inline-flex items-center justify-center"
+>
+   @{
+        var image = new ImageViewModel()
+            {
+                Name = "logo.jpg",
+                HtmlClass = "h-10 w-10 rounded-md"
+            };
+    }
+  <partial name="_ImagePartial" model="image" />
+  <h3 class="ml-2">Portfolio</h3>
+</a>
+
+

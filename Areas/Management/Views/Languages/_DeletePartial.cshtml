@@ -1,0 +1,50 @@
+@model Portfolio.Areas.Management.Models.LanguageViewModel
+
+<button onclick="openModal('delete-service-modal-@Model.Id')"
+    class="mx-2 modal-open text-lg text-gray-800 hover:text-indigo-500 border rounded-md bg-neutral-300 px-3 py-1.5 font-bold ">
+    <i class="fa fa-trash" aria-hidden="true"></i>
+</button>
+
+<div style="z-index: 50;"
+    class="modal pointer-events-none hidden fixed w-full h-full top-0 left-0 flex items-center justify-center"
+    id="delete-service-modal-@Model.Id">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"
+        onclick="closeModal('delete-service-modal-@Model.Id')">
+    </div>
+    <div style="z-index: 51;"
+        class="bg-white modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg overflow-y-auto">
+        <div class="modal-content py-4 text-left px-4">
+            <!--Title-->
+            <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold">Delete language</p>
+                <div class="modal-close cursor-pointer z-50" onclick="closeModal('delete-service-modal-@Model.Id')">
+                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 18 18">
+                        <path
+                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mx-3 text-lg font-normal ">
+                <p class="py-2 px-4">Do you want to delete @Model.Title language?</p>
+                <div class="w-full px-3 ">
+                    <a class="inline-block rounded-lg bg-green-700 px-4 py-2 text-white" asp-action="Delete"
+                        asp-route-id=@Model.Id>
+                        <span id="delete-service-button-text-@Model.Id">Delete</span>
+                        <svg id="delete-service-button-loading-@Model.Id"
+                            class="h-5 hidden w-5 animate-spin text-white" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!--Footer-->
+        </div>
+    </div>
+</div>
