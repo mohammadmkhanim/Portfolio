@@ -8,7 +8,7 @@ namespace Portfolio.Data.UnitOfWork
 {
     public interface IUnitOfWork
     {
-        public IRecentWorkRepository RecentWorkRepository { get; }
+        public IProjectRepository ProjectRepository { get; }
         public IServiceRepository ServiceRepository { get; }
         public ILanguageRepository LanguageRepository { get; }
         public IImageRepository ImageRepository { get; }

@@ -14,7 +14,7 @@ namespace Portfolio.Data.Context
             
         }
 
-        public DbSet<RecentWork> RecentWorks { get; set; }
+        public DbSet<Project> Projects { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Language> Languages { get; set; }
         public DbSet<Image> Images { get; set; }

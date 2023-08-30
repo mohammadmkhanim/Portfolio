@@ -11344,11 +11344,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Portfolio\\Portfolio.csproj",
+      "projectUniqueName": "F:\\New folder (2)\\Portfolio\\Portfolio.csproj",
       "projectName": "Portfolio",
-      "projectPath": "F:\\Portfolio\\Portfolio.csproj",
+      "projectPath": "F:\\New folder (2)\\Portfolio\\Portfolio.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "F:\\Portfolio\\obj\\",
+      "outputPath": "F:\\New folder (2)\\Portfolio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",

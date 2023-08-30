@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Data.Entities
 {
-    public class RecentWork
+    public class Project
     {
         [Key]
         public int Id { get; set; }

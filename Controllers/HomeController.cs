@@ -21,9 +21,9 @@ public class HomeController : BaseController<HomeController>
         services.Reverse();
         ViewBag.Services = _mapper.Map<List<ServiceViewModel>>(services);
 
-        var recentWorks = await _unitOfWork.RecentWorkRepository.GetAsync(includeProperties: new List<string>() { "Image" });
-        recentWorks.Reverse();
-        ViewBag.RecentWorks = _mapper.Map<List<RecentWorkViewModel>>(recentWorks);
+        var projects = await _unitOfWork.ProjectRepository.GetAsync(includeProperties: new List<string>() { "Image" });
+        projects.Reverse();
+        ViewBag.Projects = _mapper.Map<List<ProjectViewModel>>(projects);
 
         var technicalSkills = await _unitOfWork.TechnicalSkillRepository.GetAsync();
         ViewBag.TechnicalSkills = _mapper.Map<List<TechnicalSkillViewModel>>(technicalSkills);

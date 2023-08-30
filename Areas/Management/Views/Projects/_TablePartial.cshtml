@@ -1,4 +1,4 @@
-@model IEnumerable<Portfolio.Areas.Management.Models.RecentWorkViewModel>;
+@model IEnumerable<Portfolio.Areas.Management.Models.ProjectViewModel>;
 @using AutoMapper
 @inject IMapper _mapper
 
@@ -33,32 +33,32 @@
         </thead>
         <tbody>
             @{
-            foreach (var recentWork in Model)
+            foreach (var project in Model)
             {
             <tr>
                 <td class="align-middle text-center text-xs p-4">
                     @{
-                        recentWork.Image.HtmlClass = "m-auto c-max-width-3rem";
+                        project.Image.HtmlClass = "m-auto c-max-width-3rem";
                     }
-                    <partial name="_ImagePartial" model="recentWork.Image" />
+                    <partial name="_ImagePartial" model="project.Image" />
                 </td>
 
                 <td class="align-middle text-center text-xs p-4">
-                    @recentWork.Title
+                    @project.Title
                 </td>
                 <td class="align-middle text-center text-xs p-4">
-                    @recentWork.Description
+                    @project.Description
                 </td>
                 <td class="align-middle text-center text-xs p-4">
-                    @recentWork.Link
+                    @project.Link
                 </td>
                 <td class="align-middle text-center text-xs p-4 ">
-                    <partial name="_DeletePartial" model=@recentWork />
+                    <partial name="_DeletePartial" model=@project />
                     @{
-                        EditRecentWorkViewModel rditRecentWork = new EditRecentWorkViewModel();
-                        rditRecentWork = _mapper.Map<EditRecentWorkViewModel>(recentWork);
+                        EditProjectViewModel editProject = new EditProjectViewModel();
+                        editProject = _mapper.Map<EditProjectViewModel>(project);
                     }
-                    <partial name="_EditPartial" model=@rditRecentWork />
+                    <partial name="_EditPartial" model=@editProject />
 
                 </td>
             </tr> }

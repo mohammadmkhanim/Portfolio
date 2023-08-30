@@ -10,12 +10,12 @@ using Portfolio.Data.Repository.IRepositories;
 
 namespace Portfolio.Data.Repository.Repositories
 {
-    public class RecentWorkRepository : GenericRepository<RecentWork>, IRecentWorkRepository
+    public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     {
-        private DbSet<RecentWork> _recentWorks;
-        public RecentWorkRepository(PortfolioDBContext context) : base(context)
+        private DbSet<Project> _recentWorks;
+        public ProjectRepository(PortfolioDBContext context) : base(context)
         {
-            _recentWorks = context.RecentWorks;
+            _recentWorks = context.Projects;
         }
     }
 }

@@ -7,7 +7,7 @@ using Portfolio.Data.Repository.GenericRepository;
 
 namespace Portfolio.Data.Repository.IRepositories
 {
-    public interface IRecentWorkRepository : IGenericRepository<RecentWork>
+    public interface IProjectRepository : IGenericRepository<Project>
     {
 
     }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Portfolio.Areas.Management.Models
 {
-    public class RecentWorkViewModel
+    public class ProjectViewModel
     {
         [Key]
         public int Id { get; set; }
@@ -31,7 +31,7 @@ namespace Portfolio.Areas.Management.Models
         [Display(Name = "Image")]
         public ImageViewModel Image { get; set; }
     }
-    public class CreateRecentWorkViewModel
+    public class CreateProjectViewModel
     {
         [Key]
         public int Id { get; set; }
@@ -52,7 +52,7 @@ namespace Portfolio.Areas.Management.Models
         [Required(ErrorMessage = "{0} is requierd.")]
         public IFormFile ImageFile { get; set; }
     }
-    public class EditRecentWorkViewModel
+    public class EditProjectViewModel
     {
         [Key]
         public int Id { get; set; }

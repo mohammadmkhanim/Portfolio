@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Portfolio.Models
 {
-    public class RecentWorkViewModel
+    public class ProjectViewModel
     {
         [Key]
         public int Id { get; set; }

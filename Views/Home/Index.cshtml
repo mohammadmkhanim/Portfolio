@@ -228,18 +228,17 @@
 
     <div class="h-1 mb-16 w-full bg-gray-500 rounded-full"></div>
 
-    <section id="professional-projects">
-        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">professional projects</div>
+    <section id="projects">
+        <div class="text-sm font-bold tracking-wider text-white uppercase text-center mb-5">projects</div>
         <div class="text-md font-bold tracking-wider text-white text-center mb-5">See my all projects on 
             <a href="@_configuration["GitHub"]" target="_blank" class="text-blue-500">GitHub</a>
         </div>
-        @foreach (var recentWork in ViewBag.RecentWorks)
+        @foreach (var project in ViewBag.Projects)
         {
             <div class="mx-auto xl:px-0 flex flex-wrap mb-16 lg:gap-10 lg:flex-nowrap ">
                 <div class="flex items-center justify-center w-full lg:w-1/2">
                     <div>
-                        <partial name="_ImagePartial" model="recentWork.Image" />
-                        @* <img class="object-cover" style="color: transparent;" src="./IMG_20220128_013000_029.png"> *@
+                        <partial name="_ImagePartial" model="project.Image" />
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center w-full lg:w-1/2">
@@ -247,11 +246,11 @@
                         <div class="flex flex-col w-full">
                             <h3
                                 class="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl">
-                                @recentWork.Title
+                                @project.Title
                             </h3>
-                            <span class="mt-3 text-gray-200 text-lg">visit project: <a target="_blank" href="@recentWork.Link" class="px-1 rounded text-blue-400">@recentWork.Link</a></span>
+                            <span class="mt-3 text-gray-200 text-lg">visit project: <a target="_blank" href="@project.Link" class="px-1 rounded text-blue-400">@project.Link</a></span>
                             <p class="max-w-2xl text-gray-200 py-3 leading-normal">
-                                @Html.Raw(recentWork.Description.Replace("\n", "<br>"))
+                                @Html.Raw(project.Description.Replace("\n", "<br>"))
                             </p>
                         </div>
                     </div>

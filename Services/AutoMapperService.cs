@@ -15,10 +15,10 @@ namespace Portfolio.Services
             
             CreateMap<Image, ImageViewModel>().ReverseMap();
 
-            CreateMap<RecentWork, RecentWorkViewModel>().ReverseMap();
-            CreateMap<RecentWork, CreateRecentWorkViewModel>().ReverseMap();
-            CreateMap<RecentWork, EditRecentWorkViewModel>().ReverseMap();
-            CreateMap<RecentWorkViewModel, EditRecentWorkViewModel>().ReverseMap();
+            CreateMap<Project, ProjectViewModel>().ReverseMap();
+            CreateMap<Project, CreateProjectViewModel>().ReverseMap();
+            CreateMap<Project, EditProjectViewModel>().ReverseMap();
+            CreateMap<ProjectViewModel, EditProjectViewModel>().ReverseMap();
 
             CreateMap<Language, LanguageViewModel>().ReverseMap();
             CreateMap<Language, CreateLanguageViewModel>().ReverseMap();
@@ -29,7 +29,7 @@ namespace Portfolio.Services
 
             CreateMap<Image, Portfolio.Models.ImageViewModel>().ReverseMap();
             CreateMap<Service, Portfolio.Models.ServiceViewModel>().ReverseMap();
-            CreateMap<RecentWork, Portfolio.Models.RecentWorkViewModel>().ReverseMap();
+            CreateMap<Project, Portfolio.Models.ProjectViewModel>().ReverseMap();
             CreateMap<Language, Portfolio.Models.LanguageViewModel>().ReverseMap();
             CreateMap<TechnicalSkill, Portfolio.Models.TechnicalSkillViewModel>().ReverseMap();
         }

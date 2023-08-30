@@ -12,7 +12,7 @@ namespace Portfolio.Data.UnitOfWork
     {
         private PortfolioDBContext _context;
 
-        public IRecentWorkRepository _recentWorkRepository;
+        public IProjectRepository _projectRepository;
         public IServiceRepository _serviceRepository;
         public ILanguageRepository _languageRepository;
         public IImageRepository _imageRepository;
@@ -23,15 +23,15 @@ namespace Portfolio.Data.UnitOfWork
             _context = context;
         }
 
-        public IRecentWorkRepository RecentWorkRepository
+        public IProjectRepository ProjectRepository
         {
             get
             {
-                if (_recentWorkRepository == null)
+                if (_projectRepository == null)
                 {
-                    _recentWorkRepository = new RecentWorkRepository(_context);
+                    _projectRepository = new ProjectRepository(_context);
                 }
-                return _recentWorkRepository;
+                return _projectRepository;
             }
         }
         public IServiceRepository ServiceRepository
