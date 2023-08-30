@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pd3ru4sPCUHm2Qp0RMB0o2LZHwgTQFRMXTNWbTjv45Q=",
+  "Hash": "juuDz7BN4BH9XoQeCKDSOVZoeBrjHMd9ZipVvcK6hqQ=",
   "Source": "Portfolio",
   "BasePath": "_content/Portfolio",
   "Mode": "Default",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\7b420c3f465244feb2cca362fe291a6e.png"
+    },
+    {
+      "Identity": "F:\\Portfolio\\wwwroot\\Images\\871beec1522b4870ac209fc7ed0db4af.png",
+      "SourceId": "Portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Portfolio\\wwwroot\\",
+      "BasePath": "_content/Portfolio",
+      "RelativePath": "Images/871beec1522b4870ac209fc7ed0db4af.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\871beec1522b4870ac209fc7ed0db4af.png"
     },
     {
       "Identity": "F:\\Portfolio\\wwwroot\\Images\\b7549b70a2a14f039b2631172076315e.png",

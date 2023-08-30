@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\New folder (2)\\Portfolio\\Portfolio.csproj": {}
+    "F:\\Portfolio\\Portfolio.csproj": {}
   },
   "projects": {
-    "F:\\New folder (2)\\Portfolio\\Portfolio.csproj": {
+    "F:\\Portfolio\\Portfolio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\New folder (2)\\Portfolio\\Portfolio.csproj",
+        "projectUniqueName": "F:\\Portfolio\\Portfolio.csproj",
         "projectName": "Portfolio",
-        "projectPath": "F:\\New folder (2)\\Portfolio\\Portfolio.csproj",
+        "projectPath": "F:\\Portfolio\\Portfolio.csproj",
         "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-        "outputPath": "F:\\New folder (2)\\Portfolio\\obj\\",
+        "outputPath": "F:\\Portfolio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",

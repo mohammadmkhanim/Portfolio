@@ -1,99 +1,103 @@
 {
   "Files": [
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portfolio.bundle.scp.css",
+      "Id": "F:\\Portfolio\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Portfolio.bundle.scp.css",
       "PackagePath": "staticwebassets\\Portfolio.bundle.scp.css"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\DownloadFiles\\resume.pdf",
+      "Id": "F:\\Portfolio\\wwwroot\\DownloadFiles\\resume.pdf",
       "PackagePath": "staticwebassets\\DownloadFiles\\resume.pdf"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\08f2bb9f5e5a4b90a2e144333c3e2281.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\08f2bb9f5e5a4b90a2e144333c3e2281.png",
       "PackagePath": "staticwebassets\\Images\\08f2bb9f5e5a4b90a2e144333c3e2281.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\27e72b6654f54273b10e758196969a94.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\27e72b6654f54273b10e758196969a94.png",
       "PackagePath": "staticwebassets\\Images\\27e72b6654f54273b10e758196969a94.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\3f408f2fa7344ff5b697bb4bd128dcd1.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\3f408f2fa7344ff5b697bb4bd128dcd1.png",
       "PackagePath": "staticwebassets\\Images\\3f408f2fa7344ff5b697bb4bd128dcd1.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\51196d2c628340a78fd6381edd43b0d7.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\51196d2c628340a78fd6381edd43b0d7.png",
       "PackagePath": "staticwebassets\\Images\\51196d2c628340a78fd6381edd43b0d7.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\581add100a834b4e83b8cd8561b1e63b.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\581add100a834b4e83b8cd8561b1e63b.png",
       "PackagePath": "staticwebassets\\Images\\581add100a834b4e83b8cd8561b1e63b.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\58967d80ee9743418352237b07cf5b10.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\58967d80ee9743418352237b07cf5b10.png",
       "PackagePath": "staticwebassets\\Images\\58967d80ee9743418352237b07cf5b10.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\612c47c1ab4e4d2088f9309fdd13d442.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\612c47c1ab4e4d2088f9309fdd13d442.png",
       "PackagePath": "staticwebassets\\Images\\612c47c1ab4e4d2088f9309fdd13d442.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\794fbf57007c41bb8dbb3ba923a844f0.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\794fbf57007c41bb8dbb3ba923a844f0.png",
       "PackagePath": "staticwebassets\\Images\\794fbf57007c41bb8dbb3ba923a844f0.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\7a0925341861444ab04551ca4706f139.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\7a0925341861444ab04551ca4706f139.png",
       "PackagePath": "staticwebassets\\Images\\7a0925341861444ab04551ca4706f139.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\7b420c3f465244feb2cca362fe291a6e.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\7b420c3f465244feb2cca362fe291a6e.png",
       "PackagePath": "staticwebassets\\Images\\7b420c3f465244feb2cca362fe291a6e.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\b7549b70a2a14f039b2631172076315e.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\871beec1522b4870ac209fc7ed0db4af.png",
+      "PackagePath": "staticwebassets\\Images\\871beec1522b4870ac209fc7ed0db4af.png"
+    },
+    {
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\b7549b70a2a14f039b2631172076315e.png",
       "PackagePath": "staticwebassets\\Images\\b7549b70a2a14f039b2631172076315e.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\db876de2c1db4559993645baf7bdedc5.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\db876de2c1db4559993645baf7bdedc5.png",
       "PackagePath": "staticwebassets\\Images\\db876de2c1db4559993645baf7bdedc5.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\e6bb3f440edd42ae89ae00e92c9590a6.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\e6bb3f440edd42ae89ae00e92c9590a6.png",
       "PackagePath": "staticwebassets\\Images\\e6bb3f440edd42ae89ae00e92c9590a6.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\e936497256c84de2bb3dc92d99a677d1.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\e936497256c84de2bb3dc92d99a677d1.png",
       "PackagePath": "staticwebassets\\Images\\e936497256c84de2bb3dc92d99a677d1.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\fae0923f1ded442ab965878e75709574.png",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\fae0923f1ded442ab965878e75709574.png",
       "PackagePath": "staticwebassets\\Images\\fae0923f1ded442ab965878e75709574.png"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\logo.jpg",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\logo.jpg",
       "PackagePath": "staticwebassets\\Images\\logo.jpg"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\Images\\mohammadImage.jpg",
+      "Id": "F:\\Portfolio\\wwwroot\\Images\\mohammadImage.jpg",
       "PackagePath": "staticwebassets\\Images\\mohammadImage.jpg"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\css\\customStyles.css",
+      "Id": "F:\\Portfolio\\wwwroot\\css\\customStyles.css",
       "PackagePath": "staticwebassets\\css\\customStyles.css"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\css\\site.css",
+      "Id": "F:\\Portfolio\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\favicon.ico",
+      "Id": "F:\\Portfolio\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\js\\scripts.js",
+      "Id": "F:\\Portfolio\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
-      "Id": "F:\\New folder (2)\\Portfolio\\wwwroot\\js\\site.js",
+      "Id": "F:\\Portfolio\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
