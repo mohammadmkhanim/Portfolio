@@ -139,7 +139,7 @@
 
                     @foreach(var service in ViewBag.Services)
                     {
-                        <div class="inline-block w-full sm:w-[49%] lg:w-[33%] xl:w-[24%] px-4">
+                        <div class="inline-block w-full sm:w-[49%] lg:w-[33%] px-4">
                             <div
                                 class="bg-blue-600 text-white shadow-2xl py-8 rounded-lg relative overflow-hidden text-center duration-200 mb-8">
                                 <div
@@ -149,7 +149,7 @@
 
                                 </div>
                                 <h3 class="font-bold text-xl mb-3">@service.Title</h3>
-                                <p class="font-medium text-gray-100">
+                                <p title="@service.Description" class="font-medium text-gray-100 c-ellipsis-1">
                                     @service.Description
                                 </p>
                                 <div>
